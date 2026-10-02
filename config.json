@@ -1,0 +1,12 @@
+{
+  "subagents": {
+    "maxParallelTasks": 8,
+    "maxConcurrency": 4,
+    "defaultAgentScope": "user"
+  },
+  "pursue": {
+    "maxAttempts": 3,
+    "attemptTimeoutSeconds": 900,
+    "checkTimeoutSeconds": 120
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "name": "@zarldev/pi-zarlflow",
+  "version": "0.1.0",
+  "description": "Zarlflow adds /zarl workflow commands to Pi: planning, subagents, verified execution, safer edits, and handoff.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Steven <steve@zarl.dev>",
+  "homepage": "https://github.com/zarldev/pi-zarlflow#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zarldev/pi-zarlflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zarldev/pi-zarlflow/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "agent",
+    "workflow",
+    "zarlcode"
+  ],
+  "files": [
+    "extensions/",
+    "prompts/",
+    "config.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "check": "npm run lint:package && npm run test",
+    "lint:package": "node scripts/check-package.mjs",
+    "test": "node --test test/*.test.mjs",
+    "pack:dry": "npm pack --dry-run"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {},
+  "pi": {
+    "extensions": [
+      "./extensions/subagent",
+      "./extensions/pursue",
+      "./extensions/hashline",
+      "./extensions/program",
+      "./extensions/plan-mode",
+      "./extensions/guardrails",
+      "./extensions/handoff",
+      "./extensions/zarl"
+    ],
+    "prompts": [
+      "./prompts/*.md"
+    ]
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "engines": {
+    "node": ">=22.19"
+  }
+}
