@@ -1,6 +1,6 @@
-# Zarlflow for Pi
+# zarlflow for Pi
 
-Zarlflow adds a clean `/zarl` workflow surface to Pi: planning, subagents, verified execution, safer edits, and session handoff.
+zarlflow adds a clean `/zarl` workflow surface to Pi: planning, subagents, verified execution, safer edits, and session handoff.
 
 > Pi extensions execute inside the Pi process with your local user permissions. Review and trust packages before installing them.
 
@@ -41,7 +41,7 @@ All user-facing commands are namespaced under `/zarl`.
 ```text
 /zarl help                              Show command help
 /zarl doctor                            Check package/runtime health
-/zarl config                            Show effective Zarlflow config
+/zarl config                            Show effective zarlflow config
 /zarl plan                              Toggle read-only planning mode
 /zarl todos                             Show current plan progress
 /zarl agents [user|project|both]        List available subagent profiles
@@ -53,7 +53,7 @@ All user-facing commands are namespaced under `/zarl`.
 
 ## Model-callable tools
 
-Zarlflow also exposes tools the model can use during normal Pi work:
+zarlflow also exposes tools the model can use during normal Pi work:
 
 - `subagent` — delegate to isolated child Pi runs using named agent profiles.
 - `pursue` — retry an agent task until a verifier command succeeds.
@@ -69,7 +69,7 @@ Zarlflow also exposes tools the model can use during normal Pi work:
 /zarl plan
 ```
 
-Ask Pi to inspect the code and produce a numbered plan. Zarlflow disables built-in write tools while plan mode is active and tracks plan items when execution begins.
+Ask Pi to inspect the code and produce a numbered plan. zarlflow disables built-in write tools while plan mode is active and tracks plan items when execution begins.
 
 ### Verify work with a real command
 
@@ -77,7 +77,7 @@ Ask Pi to inspect the code and produce a numbered plan. Zarlflow disables built-
 /zarl pursue --check "npm test" fix the failing test
 ```
 
-Zarlflow runs isolated Pi attempts, executes the verifier after each attempt, and feeds verifier failures into the next attempt until the check passes or the attempt budget is exhausted.
+zarlflow runs isolated Pi attempts, executes the verifier after each attempt, and feeds verifier failures into the next attempt until the check passes or the attempt budget is exhausted.
 
 ### Delegate investigation
 
@@ -94,7 +94,7 @@ Then ask Pi to use the `subagent` tool for one or more focused reviews.
 /zarl handoff implement phase two of the plan
 ```
 
-Zarlflow summarizes the relevant session context into an editable prompt for a fresh Pi session.
+zarlflow summarizes the relevant session context into an editable prompt for a fresh Pi session.
 
 ## Agent profiles
 

@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for improving Zarlflow.
+Thanks for improving zarlflow.
 
 ## Development setup
 

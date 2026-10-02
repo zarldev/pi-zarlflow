@@ -1,7 +1,7 @@
 {
   "name": "@zarldev/pi-zarlflow",
   "version": "0.1.0",
-  "description": "Zarlflow adds /zarl workflow commands to Pi: planning, subagents, verified execution, safer edits, and handoff.",
+  "description": "zarlflow adds /zarl workflow commands to Pi: planning, subagents, verified execution, safer edits, and handoff.",
   "type": "module",
   "license": "MIT",
   "author": "Steven <steve@zarl.dev>",

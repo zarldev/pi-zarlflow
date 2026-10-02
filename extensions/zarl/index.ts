@@ -5,7 +5,7 @@ import { getZarlSubcommands } from "./registry.ts";
 function helpText(): string {
 	const commands = getZarlSubcommands();
 	const rows = [
-		"Zarlflow commands:",
+		"zarlflow commands:",
 		"",
 		"/zarl help                 Show this help",
 		"/zarl doctor               Check package/runtime health",
@@ -23,7 +23,7 @@ function configText(): string {
 
 export default function zarlflowCommand(pi: ExtensionAPI) {
 	pi.registerCommand("zarl", {
-		description: "Zarlflow workflow commands for Pi",
+		description: "zarlflow workflow commands for Pi",
 		handler: async (args, ctx) => {
 			const trimmed = args.trim();
 			const [name = "help", ...rest] = trimmed.split(/\s+/);
@@ -35,7 +35,7 @@ export default function zarlflowCommand(pi: ExtensionAPI) {
 			}
 
 			if (name === "config") {
-				ctx.ui.notify(`Zarlflow config:\n${configText()}`, "info");
+				ctx.ui.notify(`zarlflow config:\n${configText()}`, "info");
 				return;
 			}
 
@@ -43,7 +43,7 @@ export default function zarlflowCommand(pi: ExtensionAPI) {
 				const commands = [...getZarlSubcommands().keys()].sort();
 				ctx.ui.notify(
 					[
-						"Zarlflow doctor: OK",
+						"zarlflow doctor: OK",
 						`cwd: ${ctx.cwd}`,
 						`registered subcommands: ${commands.join(", ") || "none"}`,
 						`config: ${configText()}`,
@@ -64,7 +64,7 @@ export default function zarlflowCommand(pi: ExtensionAPI) {
 
 	pi.on("before_agent_start", async () => ({
 		guidelines: [
-			"Zarlflow is available through `/zarl ...` commands for planning, subagents, verified execution, and handoff workflows.",
+			"zarlflow is available through `/zarl ...` commands for planning, subagents, verified execution, and handoff workflows.",
 		],
 	}));
 }
